@@ -1,47 +1,89 @@
-# Svelte + TS + Vite
+<div align="center">
+    <h1>Gemini Tic-Tac-Toe</h1>
+    <p>Created exclusively with the Gemini CLI</p>
+    <p>
+        <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+        <img alt="Svelte" src="https://img.shields.io/badge/-Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" />
+        <img alt="SCSS" src="https://img.shields.io/badge/-SCSS-CC6699?style=flat-square&logo=sass&logoColor=white" />
+        <img alt="Vite" src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+        <img alt="Gemini" src="https://img.shields.io/badge/-Gemini-4285F4?style=flat-square&logo=google-gemini&logoColor=white" />
+    </p>
+</div>
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+## Overview
 
-## Recommended IDE Setup
+This was a vibe coding test using the Gemini CLI to create a Tic-Tac-Toe game in Svelte. The game is designed to be played against an AI opponent, or another local player, with the computer using a simple algorithm to make its moves.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+I did not write any code in order to make this app work, neither did I run a single command in the terminal. This project was entirely created using the Gemini CLI, which generated all the necessary files and code based on the prompts provided.
 
-## Need an official Svelte framework?
+> [!NOTE]
+> I did make two additional commits to deploy the project to GitHub Pages. I should have done this before the final commit, but I forgot to do so.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Gemini CLI Usage
 
-## Technical considerations
+After Creating the app using the prompts below, this was the CLI summary of the usage of the Gemini CLI:
 
-**Why use this over SvelteKit?**
+![Gemini CLI Screenshot](/public/gemini-usage.png)
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Gemini CLI Log
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+Here is a full log of the conversation with the Gemini CLI:
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```json
+[
+    {
+        "messageId": 0,
+        "type": "user",
+        "message": "/help",
+        "timestamp": "2025-07-14T03:04:25.748Z"
+    },
+    {
+        "messageId": 1,
+        "type": "user",
+        "message": "/tools",
+        "timestamp": "2025-07-14T03:05:08.556Z"
+    },
+    {
+        "messageId": 2,
+        "type": "user",
+        "message": "/extensions",
+        "timestamp": "2025-07-14T03:05:29.703Z"
+    },
+    {
+        "messageId": 3,
+        "type": "user",
+        "message": "/clear",
+        "timestamp": "2025-07-14T03:05:48.784Z"
+    },
+    {
+        "messageId": 4,
+        "type": "user",
+        "message": "Create a tic tac toe website in svelte. Create a new folder for this project. The game should have an easy, medium, and hard mode, and you should be able to play against the computer, or someone else. Make sure the user can select all of those options. Use SCSS for styling, and make the game look modern. It should also be responsive for mobile devices.",
+        "timestamp": "2025-07-14T03:10:18.102Z"
+    },
+    {
+        "messageId": 5,
+        "type": "user",
+        "message": "Add a light and a dark mode toggle",
+        "timestamp": "2025-07-14T03:21:37.818Z"
+    },
+    {
+        "messageId": 6,
+        "type": "user",
+        "message": "There are some UI bugs. For example, the game board goes out of the main tag after a board section has been populated with an X or a Y. When the board is full, the reset game button also appears on top of the board. Fix these UI bugs",
+        "timestamp": "2025-07-14T03:29:20.857Z"
+    },
+    {
+        "messageId": 7,
+        "type": "user",
+        "message": "Generate an image for the favicon and replace the Vite one that is there, and update the title of the app that appears in the tab header",
+        "timestamp": "2025-07-14T03:37:55.502Z"
+    },
+    {
+        "messageId": 8,
+        "type": "user",
+        "message": "/quit",
+        "timestamp": "2025-07-14T03:45:09.734Z"
+    }
+]
 ```
