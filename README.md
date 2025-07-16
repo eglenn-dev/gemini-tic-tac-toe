@@ -10,6 +10,8 @@
     </p>
 </div>
 
+[Read my analysis](https://ethanglenn.dev/blog/gemini-tic-tac-toe)
+
 ## Overview
 
 This was a vibe coding test using the Gemini CLI to create a Tic-Tac-Toe game in Svelte. The game is designed to be played against an AI opponent, or another local player, with the computer using a simple algorithm to make its moves.
